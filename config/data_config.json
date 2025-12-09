@@ -1,0 +1,51 @@
+{
+  "data_sources": {
+    "od_matrix": {
+      "description": "粤港澳大湾区城市间OD矩阵数据",
+      "variables": {
+        "数据传输量_TB": "城市间数据传输量（TB）",
+        "API调用频次_万次": "API调用频次（万次）",
+        "企业合作数据项目数": "企业合作数据项目数量"
+      }
+    },
+    "main_data": {
+      "description": "粤港澳大湾区城市年度数据",
+      "dimensions": {
+        "数据流动维度": [
+          "跨境数据传输总量_TB",
+          "数据中心数量",
+          "互联网国际出口带宽_Gbps",
+          "API调用量_亿次"
+        ],
+        "经济发展维度": [
+          "GDP_亿元",
+          "数字经济核心产业增加值_亿元",
+          "外贸进出口总额_亿元"
+        ],
+        "创新能力维度": [
+          "研发经费投入_亿元",
+          "发明专利授权量",
+          "高新技术企业数"
+        ],
+        "基础设施维度": [
+          "5G基站数量",
+          "算力规模_PFLOPS",
+          "物联网连接数_万个"
+        ]
+      }
+    }
+  },
+  "data_quality": {
+    "missing_value_threshold": 0.3,
+    "outlier_methods": [
+      "iqr",
+      "zscore",
+      "isolation_forest"
+    ],
+    "normalization_methods": [
+      "standard",
+      "minmax",
+      "robust"
+    ]
+  }
+}

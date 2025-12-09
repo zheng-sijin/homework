@@ -1,0 +1,28 @@
+﻿# Base data processing
+pandas>=1.5.3
+numpy>=1.24.3
+scipy>=1.10.1
+
+# Data visualization
+matplotlib>=3.7.1
+seaborn>=0.12.2
+
+# Machine learning and statistical analysis
+scikit-learn==1.2.2  # 降低版本以兼容Python 3.11
+statsmodels>=0.14.0
+
+# Factor analysis
+factor-analyzer>=0.4.1
+
+# Geospatial analysis
+geopandas>=0.13.2
+libpysal>=4.7.0
+esda>=2.4.3
+splot>=1.1.5
+
+# Distance correlation - 使用兼容版本
+dcor==0.6  # 降低版本
+
+# Other utilities
+tqdm>=4.65.0
+joblib>=1.2.0

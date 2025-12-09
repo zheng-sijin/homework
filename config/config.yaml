@@ -1,0 +1,50 @@
+# 数据配置
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  external_data_path: "data/external/"
+  
+  # OD矩阵数据
+  od_matrix_file: "od_matrix.csv"
+  main_data_file: "main_data_advanced.csv"
+  
+  # 城市列表
+  cities: ["香港", "澳门", "广州", "深圳", "珠海", "佛山", "惠州", "东莞", "中山", "江门", "肇庆"]
+  
+# 分析配置
+analysis:
+  # PCA配置
+  pca:
+    n_components: null  # null表示自动确定
+    variance_threshold: 0.85
+    rotation: "varimax"
+    
+  # 聚类配置
+  clustering:
+    algorithms: ["kmeans", "hierarchical", "dbscan", "gmm", "spectral"]
+    max_clusters: 10
+    random_state: 42
+    
+  # 空间分析配置
+  spatial:
+    weight_matrices: ["queen", "knn", "distance"]
+    knn_neighbors: 5
+    distance_threshold: 100
+    
+# 可视化配置
+visualization:
+  color_palette: "Set2"
+  figure_size: [12, 8]
+  dpi: 300
+  
+# 输出配置
+output:
+  figures_format: "png"
+  tables_format: "csv"
+  report_format: "pdf"
+  
+# 日志配置
+logging:
+  level: "INFO"
+  file: "logs/analysis.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
